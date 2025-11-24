@@ -16,6 +16,22 @@ Works with:
 
 ---
 
+# 0. Initialise a Jeckyll blog (You only need to do this the first time)
+
+Create the Gemfile, _config.yaml, Gemfile.lock, index.md, 404.html, about.md _posts/
+to get things started, by mounting the current directory into a docker image with ruby and jekyll installed.
+
+The important command is `jekyll new .`
+
+```bash
+docker run --rm -v "$(pwd):/site" -w /site ruby:3.3-slim bash -c "
+  apt-get update &&
+  apt-get install -y build-essential nodejs git &&
+  gem install bundler jekyll &&
+  jekyll new .
+"
+```
+
 # 📁 1. Create a New Blog Post
 
 All blog posts live in the `_posts/` folder.
@@ -57,6 +73,9 @@ docker build -t jekyll-blog .
 ```
 
 ### **Run your site:**
+
+Installs plugins etc specified in the Gemfile, generates the site, as per the _config.yml,
+and serves it on port 4000
 
 ```bash
 docker run --rm -v "$(pwd):/site" -p 4000:4000 jekyll-blog
@@ -238,3 +257,18 @@ Pages deploy automatically.
 ---
 
 If you ever forget steps, just come back to this file — it lists everything you need. 🚀
+
+===========================
+
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+
+You can find the source code for Minima at GitHub:
+[jekyll][jekyll-organization] /
+[minima](https://github.com/jekyll/minima)
+
+You can find the source code for Jekyll at GitHub:
+[jekyll][jekyll-organization] /
+[jekyll](https://github.com/jekyll/jekyll)
+
+
+[jekyll-organization]: https://github.com/jekyll
