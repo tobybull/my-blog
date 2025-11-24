@@ -23,7 +23,7 @@ email: your_name@tobybull.uk
 description: >- # this means to ignore newlines until "baseurl:"
   I've moved on from my former 9-5 way of working to pursue a new direction in my life and career.
   Here you will find my thoughts on anything I encounter as I try to make it as a self employed Software Engineer.
-baseurl: "/my-blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tobybull.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: tobybull
 
