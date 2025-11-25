@@ -3,6 +3,7 @@ layout: post
 title:  "The First of Many"
 date:   2025-11-24 10:32:19 +0000
 categories: jekyll update
+excerpt: The work was lucrative, that's for sure. I described it as golden handcuffs, because it was plagued by frustrating aspects, through to down right ridiculous blockers to productivity or success.
 ---
 
 ## Where it all began

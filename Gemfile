@@ -34,3 +34,8 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "jekyll-paginate"
 gem "jekyll-seo-tag"
+
+# gem 'github-pages'
+gem "webrick", "~> 1.7"
+
+gem "jekyll-sitemap"
