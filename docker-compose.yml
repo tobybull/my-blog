@@ -1,0 +1,14 @@
+# docker compose up
+
+version: "3.9"
+services:
+  jekyll:
+    build: .
+    container_name: jekyll-blog
+    command: bundle exec jekyll serve --watch --drafts --livereload --host 0.0.0.0
+    ports:
+      - "4000:4000"
+      - "35729:35729" # LiveReload
+    volumes:
+      - .:/site
+    restart: unless-stopped
